@@ -1,0 +1,112 @@
+/**
+ * @name (your theme name)
+ * @author (your name)
+ * @version (your theme version)
+ * @description Highly customizable theme for BetterDiscord.
+ * @source (github repository)
+ * @website (your site)
+ * @invite (your discord invite)
+ * also you can remove thing from the details(DONT DELETE THIS THINGS: name, author, version, description)
+ */
+
+/* IMPORT CSS */
+@import url(https://raw.githubusercontent.com/NEVERSTOPGR/betterdiscordthemetemplate/main/main.css);
+
+/* SETTINGS */
+:root {
+  /* ACCENT COLORS */
+  --main-color: #2780e6; /* main accent color (hex, rgb or hsl)*/
+  --hover-color: #1e63b3; /* hover accent color (hex, rgb or hsl)*/
+  --success-color: #43b581; /* success accent color (hex, rgb or hsl)*/
+  --danger-color: #982929; /* danger accent color (hex, rgb or hsl)*/
+  --url-color: var(--main-color); /*The color of url links. This is the main color right now.*/
+
+  /* STATUS COLORS */
+  --online-color: #43b581; /* online status color (hex, rgb or hsl)*/
+  --idle-color: #faa61a; /* idle status color (hex, rgb or hsl)*/
+  --dnd-color: #982929; /* dnd status color (hex, rgb or hsl)*/
+  --streaming-color: #593695; /* streaming status color (hex, rgb or hsl)*/
+  --offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl)*/
+
+  /* GENERAL */
+  --main-font: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif; /* main font for app (font must be installed)*/
+  --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* font for codeblocks (font must be installed)*/
+  --text-normal: rgb(220, 221, 222); /* color of default discord text */
+  --text-muted: rgb(114, 118, 125); /* color of default discord muted text (e.g.text found in input fields before typing).*/
+  --channels-width: 240px; /* channel list width (240px for Discord default)*/
+  --members-width: 240px; /* member list width*/
+
+  /* APP BACKGROUND */
+  --background-shading: 100%; /* app background shading (0 for complete smoothness)*/
+  --background-overlay: rgba(0, 0, 0, 0.6); /* app background overlay color/gradient */
+  --background-image: url(https://github.com/NEVERSTOPGR/betterdiscordthemetemplate/blob/bec8d56c71ecd80468ddc9382504ebfdabca98bc/themebg.png); /* app background image (link must be HTTPS)*/
+  --background-position: center; /* app background position*/
+  --background-size: cover; /* app background size*/
+  --background-repeat: no-repeat; /* app background repeat*/
+  --background-attachment: fixed; /* app background attachment*/
+  --background-brightness: 100%; /* app background brightness (< 100% for darken, > 100% for lighten)*/
+  --background-contrast: 100%; /* app background contrast*/
+  --background-saturation: 100%; /* app background saturation*/
+  --background-invert: 0%; /* app background invert (0 - 100%)*/
+  --background-grayscale: 0%; /* app background grayscale ( 0 - 100%)*/
+  --background-sepia: 0%; /* app background sepia (0 - 100%)*/
+  --background-blur: 0px; /* app background blur*/
+
+  /* HOME BUTTON ICON */
+  --home-size: 40px; /* home button icon size*/
+
+  /* CHANNEL COLORS */
+  --channel-unread: var(--main-color); /* Unread Server channel color. THIS OVERRIDES YOUR MAIN COLOR*/
+  --channel-color: rgba(255, 255, 255, 0.3); /*Read Server channel color*/
+  --channel-text-selected: #fff; /* Selected channel text color, CV default is #fff */
+  --muted-color: rgba(255, 255, 255, 0.1); /*Muted channel color*/
+
+  /* MODAL BACKDROP */
+  --backdrop-overlay: rgba(0, 0, 0, 0.8); /* modal backdrop overlay color/gradient */
+  --backdrop-image: var(--background-image); /* modal backdrop image (link must be HTTPS) */
+  --backdrop-position: var(--background-position); /* modal backdrop position*/
+  --backdrop-size: var(--background-size); /* modal backdrop size*/
+  --backdrop-repeat: var(--background-repeat); /* modal backdrop repeat*/
+  --backdrop-attachment: var(--background-attachment); /* modal backdrop attachment*/
+  --backdrop-brightness: var(--background-brightness); /* modal backdrop brightness (< 100% for darken, > 100% for lighten)*/
+  --backdrop-contrast: var(--background-contrast); /* modal backdrop contrast*/
+  --backdrop-saturation: var(--background-saturation); /* modal backdrop saturation*/
+  --backdrop-invert: var(--background-invert); /* modal backdrop invert (0 - 100%)*/
+  --backdrop-grayscale: var(--background-grayscale); /* modal backdrop grayscale ( 0 - 100%)*/
+  --backdrop-sepia: var(--background-sepia); /* modal backdrop sepia (0 - 100%)*/
+  --backdrop-blur: var(--background-blur); /* modal backdrop blur*/
+
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image); /* app background image (link must be HTTPS)*/
+  --user-popout-position: var(--background-position); /* user popout background position*/
+  --user-popout-size: var(--background-size); /* user popout background size*/
+  --user-popout-repeat: var(--background-repeat); /* user popout background repeat*/
+  --user-popout-attachment: var(--background-attachment); /* user popout background attachment*/
+  --user-popout-brightness: var(--background-brightness); /* user popout background brightness (< 100% for darken, > 100% for lighten)*/
+  --user-popout-contrast: var(--background-contrast); /* user popout background contrast*/
+  --user-popout-saturation: var(--background-saturation); /* user popout background saturation*/
+  --user-popout-invert: var(--background-invert); /* user popout background invert (0 - 100%)*/
+  --user-popout-grayscale: var(--background-grayscale); /* user popout background grayscale (0 - 100%)*/
+  --user-popout-sepia: var(--background-sepia); /* user popout background sepia (0 - 100%)*/
+  --user-popout-blur: calc(var(--background-blur) + 3px); /* user popout background blur*/
+  --user-popout-overlay: rgba(0, 0, 0, 0.6); /* user popout overlay color*/
+
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image); /* app background image (link must be HTTPS)*/
+  --user-modal-position: var(--background-position); /* user modal background position*/
+  --user-modal-size: var(--background-size); /* user modal background size*/
+  --user-modal-repeat: var(--background-repeat); /* user modal background repeat*/
+  --user-modal-attachment: var(--background-attachment); /* user modal background attachment*/
+  --user-modal-brightness: var(--background-brightness); /* user modal background brightness (< 100% for darken, > 100% for lighten)*/
+  --user-modal-contrast: var(--background-contrast); /* user modal background contrast*/
+  --user-modal-saturation: var(--background-saturation); /* user modal background saturation*/
+  --user-modal-invert: var(--background-invert); /* user modal background invert (0 - 100%)*/
+  --user-modal-grayscale: var(--background-grayscale); /* user modal background grayscale (0 - 100%)*/
+  --user-modal-sepia: var(--background-sepia); /* user modal background sepia (0 - 100%)*/
+  --user-modal-blur: calc(var(--background-blur) + 3px); /* user modal background blur*/
+
+  /* THEME BD COLORS */
+  --bd-blue: var(--main-color); /* betterdiscord main color*/
+  --bd-blue-hover: var(--hover-color); /* betterdiscord hover color*/
+  --bd-blue-active: var(--hover-color); /* betterdiscord active color*/
+}
